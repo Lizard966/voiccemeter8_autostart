@@ -33,7 +33,7 @@ function Test-ProcessRunning($processName) {
 $audioProcess = Get-Process -Name Audiodg
 
 if ($audioProcess) {
-    $audioProcess.PriorityClass = [System.Diagnostics.ProcessPriorityClass]::AboveNormal
+    $audioProcess.PriorityClass = [System.Diagnostics.ProcessPriorityClass]::Normal
     $audioProcess.ProcessorAffinity = 1
     start-countdown 10
 } else {
